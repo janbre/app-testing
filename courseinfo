@@ -1,0 +1,40 @@
+course
+    - code
+    - norwegianName
+    - englishName
+    - credit
+    - studyLevelCode
+    - courseTypeName
+    - taughtInSpring
+    - taughtInAutumn
+    - taughtInEnglish
+
+    infoType
+        anbefalte forkunnskaper
+        forkunnskapskrav
+        faglig innhold
+        læringsform
+        læringsmål
+
+    assessment
+        codeName
+        date
+        statusName
+        gradeWeightingNumerator
+        gradeWeightingDenominator
+        duration
+        examinationSupport
+            code
+
+    educationalRole
+        code
+        person
+            firstName
+            lastName
+
+    creditReduction
+        coursecode
+        creditsreduction
+
+    usedInStudyProgrammes
+

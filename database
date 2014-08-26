@@ -1,0 +1,3 @@
+Need following database tables:
+    - Course list > stores only course code, norwegian and english name. Key = code
+    - Course > stores all relevant information about courses saved. Key = code
