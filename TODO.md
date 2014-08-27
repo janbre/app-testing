@@ -1,5 +1,4 @@
-Retrieve a list of all courses from http://www.ime.ntnu.no/api/course/-
- - size is ~700K, so not exactly a daunting download size, and shouldn't be any problem parsing and used to populate a database
+~~Retrieve a list of all courses from http://www.ime.ntnu.no/api/course/-~~
 
 Create a database from the retrieved data
  - update database once a week
