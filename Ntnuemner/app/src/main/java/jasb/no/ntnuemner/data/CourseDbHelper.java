@@ -1,13 +1,18 @@
 package jasb.no.ntnuemner.data;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQueryBuilder;
+import android.util.Log;
 
 /**
  * Created by alex on 8/26/14.
  */
 public class CourseDbHelper extends SQLiteOpenHelper {
+
+    private static final String LOG_TAG = CourseDbHelper.class.getSimpleName();
 
     private static final int DATABASE_VERSION = 1;
 
@@ -28,7 +33,7 @@ public class CourseDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_COURSE_TABLE = "CREATE TABLE " +
                 TABLE_NAME + " (" +
                 _ID + " INTEGER PRIMARY KEY, " +
-                COURSE_CODE + " TEXT UNIQUE NOT NULL, " +
+                COURSE_CODE + " TEXT UNIQUE NOT NULL COLLATE NOCASE, " +
                 COURSE_NORWEGIAN_NAME + " TEXT NOT NULL, " +
                 COURSE_ENGLISH_NAME + " TEXT NOT NULL, " +
                 "UNIQUE (" + COURSE_CODE + ") " +
@@ -38,7 +43,12 @@ public class CourseDbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+        Log.w(LOG_TAG, "Upgrading database from version " + oldVersion + " to "
+                + newVersion + ", which will destroy all old data");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(sqLiteDatabase);
 
     }
+
 }
