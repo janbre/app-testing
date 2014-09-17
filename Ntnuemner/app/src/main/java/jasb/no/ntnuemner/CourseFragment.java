@@ -27,7 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by alex on 8/18/14.
+ * author: jasb.
  */
 public class CourseFragment extends Fragment {
 

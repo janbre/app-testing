@@ -11,6 +11,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * author: jasb
+ */
 
 public class MainActivity extends ActionBarActivity {
 
@@ -43,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
         SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
         // Assumes current activity is the searchable activity
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+       // searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
         return true;
     }
 
