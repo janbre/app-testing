@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NewVersion</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Course code or name</string>
+
+    <!-- Activity titles -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_search_results">DisplaySearchResultsActivity</string>
+
+    <!-- Buttons -->
+    <string name="button_send">Search</string>
+    <string name="button_update">Fetch list of courses</string>
+    <string name="button_timetable">Timetable</string>
+    <string name="button_institute">List by institutes</string>
+
+
+</resources>
